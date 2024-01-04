@@ -4,10 +4,29 @@
  */
 package modelo;
 
+import controlador.ControlLogin;
+import controlador.ControlRegistro;
+import controlador.ControlVistaInicio;
+import vista.Login;
+import vista.Menu;
+import vista.Registro;
+import vista.VistaInicio;
+
 /**
  *
  * @author danie
  */
 public class Principal {
     
+    
+    public static void main(String[] args) {
+
+        Login login = new Login();
+        login.setVisible(true);
+        ControlLogin cl = new ControlLogin(login);
+
+        cl.start();
+
+    }
+
 }
