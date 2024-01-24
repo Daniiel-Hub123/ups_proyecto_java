@@ -10,7 +10,7 @@ package modelo;
  */
 public class Usuario {
 
-    private String id;
+    private String cedula;
     private String user;
     private String pass;
     private int ranking;
@@ -21,14 +21,14 @@ public class Usuario {
 
     //Contructor para login
     public Usuario(String id, String user, String pass) {
-        this.id = id;
+        this.cedula = id;
         this.user = user;
         this.pass = pass;
     }
 
     //Constructor para información completa del Usuario
     public Usuario(String id, String user, String pass, int ranking, double puntuacion) {
-        this.id = id;
+        this.cedula = id;
         this.user = user;
         this.pass = pass;
         this.ranking = ranking;
@@ -37,7 +37,7 @@ public class Usuario {
 
     //Constructor para informacion de la ventana de Ranking
     public Usuario(String id, int ranking, double puntuacion) {
-        this.id = id;
+        this.cedula = id;
         this.ranking = ranking;
         this.puntuacion = puntuacion;
     }
@@ -60,12 +60,12 @@ public class Usuario {
         this.puntuacion = puntuacion;
     }
 
-    public String getId() {
-        return id;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public String getUser() {

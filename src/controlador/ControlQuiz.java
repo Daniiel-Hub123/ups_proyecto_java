@@ -8,6 +8,6 @@ package controlador;
  *
  * @author danie
  */
-public class ControlCuestionario {
+public class ControlQuiz {
     
 }

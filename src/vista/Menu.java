@@ -6,6 +6,7 @@ package vista;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import org.edisoncor.gui.button.ButtonAqua;
 
 /**
  *
@@ -20,73 +21,21 @@ public class Menu extends javax.swing.JInternalFrame {
         initComponents();
     }
 
-    public JButton getBtncerrar() {
-        return btncerrar;
+    public ButtonAqua getBtnJugar() {
+        return btnJugar;
     }
 
-    public void setBtncerrar(JButton btncerrar) {
-        this.btncerrar = btncerrar;
+    public void setBtnJugar(ButtonAqua btnJugar) {
+        this.btnJugar = btnJugar;
     }
 
-    
-    
-    public JButton getBtnamazonia() {
-        return btnamazonia;
+    public JButton getBtnSalir() {
+        return btnSalir;
     }
 
-    public void setBtnamazonia(JButton btnamazonia) {
-        this.btnamazonia = btnamazonia;
+    public void setBtnSalir(JButton btnSalir) {
+        this.btnSalir = btnSalir;
     }
-
-    public JButton getBtncosta() {
-        return btncosta;
-    }
-
-    public void setBtncosta(JButton btncosta) {
-        this.btncosta = btncosta;
-    }
-
-    public JButton getBtninsular() {
-        return btninsular;
-    }
-
-    public void setBtninsular(JButton btninsular) {
-        this.btninsular = btninsular;
-    }
-
-    public JButton getBtnsierra() {
-        return btnsierra;
-    }
-
-    public void setBtnsierra(JButton btnsierra) {
-        this.btnsierra = btnsierra;
-    }
-
-    public JLabel getLogo() {
-        return logo;
-    }
-
-    public void setLogo(JLabel logo) {
-        this.logo = logo;
-    }
-
-    public JLabel getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(JLabel titulo) {
-        this.titulo = titulo;
-    }
-
-    public JLabel getTxt() {
-        return txt;
-    }
-
-    public void setTxt(JLabel txt) {
-        this.txt = txt;
-    }
-
-    
     
     
     
@@ -99,127 +48,109 @@ public class Menu extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        logo = new javax.swing.JLabel();
-        titulo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        btninsular = new javax.swing.JButton();
-        btnamazonia = new javax.swing.JButton();
-        btncosta = new javax.swing.JButton();
-        btnsierra = new javax.swing.JButton();
+        panelRectTranslucido1 = new org.edisoncor.gui.panel.PanelRectTranslucido();
+        btnSalir = new javax.swing.JButton();
+        btnJugar = new org.edisoncor.gui.button.ButtonAqua();
+        panelImage1 = new org.edisoncor.gui.panel.PanelImage();
         txt = new javax.swing.JLabel();
-        btncerrar = new javax.swing.JButton();
+        titulo = new javax.swing.JLabel();
+        titulo1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido1.setColorDeBorde(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido1.setColorPrimario(new java.awt.Color(255, 255, 102));
+        panelRectTranslucido1.setColorSecundario(new java.awt.Color(255, 0, 0));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/estrella.png"))); // NOI18N
+        btnSalir.setText("X");
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logoups23.png"))); // NOI18N
+        btnJugar.setBackground(new java.awt.Color(255, 51, 51));
+        btnJugar.setText("INICIAR");
+        btnJugar.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
+
+        panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/194556.png"))); // NOI18N
+
+        txt.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
+        txt.setText("Presione el boton para empezar a Jugar!");
 
         titulo.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
         titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titulo.setText("JUEGO DE PREGUNTAS \n" + "ECUADOR");
+        titulo.setText("JUEGO DE PREGUNTAS ");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/estrella.png"))); // NOI18N
+        titulo1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
+        titulo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo1.setText("ECUADOR");
 
-        btninsular.setText("REGION INSULAR");
-
-        btnamazonia.setText("REGION AMAZONIA");
-
-        btncosta.setText("REGION COSTA");
-
-        btnsierra.setText("REGION SIERRA");
-
-        txt.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 14)); // NOI18N
-        txt.setText("Escoja una categoria para empezar a Jugar!");
-
-        btncerrar.setText("X");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(logo)
-                                    .addComponent(txt))
-                                .addContainerGap())
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btninsular, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnsierra, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(108, 108, 108)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(btnamazonia)
-                                        .addGap(114, 114, 114))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(btncosta, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(22, 22, 22))))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        javax.swing.GroupLayout panelImage1Layout = new javax.swing.GroupLayout(panelImage1);
+        panelImage1.setLayout(panelImage1Layout);
+        panelImage1Layout.setHorizontalGroup(
+            panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelImage1Layout.createSequentialGroup()
+                .addGroup(panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelImage1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelImage1Layout.createSequentialGroup()
+                        .addGroup(panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelImage1Layout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelImage1Layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(txt)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(23, 23, 23)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(31, 31, 31)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(logo)
-                .addGap(18, 18, 18)
-                .addComponent(txt, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btncosta, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btninsular, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnsierra, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnamazonia, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52))
+        panelImage1Layout.setVerticalGroup(
+            panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelImage1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(titulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(titulo1)
+                .addGap(140, 140, 140)
+                .addComponent(txt, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout panelRectTranslucido1Layout = new javax.swing.GroupLayout(panelRectTranslucido1);
+        panelRectTranslucido1.setLayout(panelRectTranslucido1Layout);
+        panelRectTranslucido1Layout.setHorizontalGroup(
+            panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRectTranslucido1Layout.createSequentialGroup()
+                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                        .addContainerGap(202, Short.MAX_VALUE)
+                        .addComponent(btnJugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(167, 167, 167))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRectTranslucido1Layout.createSequentialGroup()
+                .addContainerGap(554, Short.MAX_VALUE)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        panelRectTranslucido1Layout.setVerticalGroup(
+            panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addComponent(panelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(btnJugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelRectTranslucido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelRectTranslucido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -227,16 +158,12 @@ public class Menu extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnamazonia;
-    private javax.swing.JButton btncerrar;
-    private javax.swing.JButton btncosta;
-    private javax.swing.JButton btninsular;
-    private javax.swing.JButton btnsierra;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel logo;
+    private org.edisoncor.gui.button.ButtonAqua btnJugar;
+    private javax.swing.JButton btnSalir;
+    private org.edisoncor.gui.panel.PanelImage panelImage1;
+    private org.edisoncor.gui.panel.PanelRectTranslucido panelRectTranslucido1;
     private javax.swing.JLabel titulo;
+    private javax.swing.JLabel titulo1;
     private javax.swing.JLabel txt;
     // End of variables declaration//GEN-END:variables
 }

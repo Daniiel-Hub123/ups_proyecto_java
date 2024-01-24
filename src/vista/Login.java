@@ -4,15 +4,16 @@
  */
 package vista;
 
-import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
+import org.edisoncor.gui.button.ButtonAqua;
+import org.edisoncor.gui.passwordField.PasswordField;
+import org.edisoncor.gui.textField.TextField;
 
 /**
  *
  * @author danie
  */
-public class Login extends javax.swing.JFrame {
+public class Login extends javax.swing.JDialog {
 
     /**
      * Creates new form Login
@@ -21,48 +22,40 @@ public class Login extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnentrar() {
-        return btnentrar;
+    public ButtonAqua getBtnEntrar() {
+        return btnEntrar;
     }
 
-    public void setBtnentrar(JButton btnentrar) {
-        this.btnentrar = btnentrar;
+    public void setBtnEntrar(ButtonAqua btnEntrar) {
+        this.btnEntrar = btnEntrar;
     }
 
-    public JButton getBtnregistrarse() {
-        return btnregistrarse;
+    public ButtonAqua getBtnRegistrarse() {
+        return btnRegistrarse;
     }
 
-    public void setBtnregistrarse(JButton btnregistrarse) {
-        this.btnregistrarse = btnregistrarse;
+    public void setBtnRegistrarse(ButtonAqua btnRegistrarse) {
+        this.btnRegistrarse = btnRegistrarse;
     }
 
-    public JTextField getPass() {
-        return pass;
+    public PasswordField getTxtPass() {
+        return txtPass;
     }
 
-    public void setPass(JTextField pass) {
-        this.pass = pass;
+    public void setTxtPass(PasswordField txtPass) {
+        this.txtPass = txtPass;
     }
 
-    public JLabel getTitulo() {
-        return titulo;
+    public TextField getTxtUser() {
+        return txtUser;
     }
 
-    public void setTitulo(JLabel titulo) {
-        this.titulo = titulo;
-    }
-
-    public JTextField getUser() {
-        return user;
-    }
-
-    public void setUser(JTextField user) {
-        this.user = user;
+    public void setTxtUser(TextField txtUser) {
+        this.txtUser = txtUser;
     }
 
     
-    
+
     
     
     /**
@@ -74,113 +67,121 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        panelRectTranslucido1 = new org.edisoncor.gui.panel.PanelRectTranslucido();
         titulo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         title1 = new javax.swing.JLabel();
         title2 = new javax.swing.JLabel();
-        user = new javax.swing.JTextField();
-        pass = new javax.swing.JTextField();
-        btnentrar = new javax.swing.JButton();
-        btnregistrarse = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        txtPass = new org.edisoncor.gui.passwordField.PasswordField();
+        txtUser = new org.edisoncor.gui.textField.TextField();
+        btnEntrar = new org.edisoncor.gui.button.ButtonAqua();
+        btnRegistrarse = new org.edisoncor.gui.button.ButtonAqua();
+        panelImage1 = new org.edisoncor.gui.panel.PanelImage();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido1.setColorDeBorde(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido1.setColorPrimario(new java.awt.Color(255, 255, 0));
+        panelRectTranslucido1.setColorSecundario(new java.awt.Color(255, 153, 102));
 
-        titulo.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
-        titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 36)); // NOI18N
+        titulo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         titulo.setText("INICIO DE SESIÓN");
-
-        title1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
-        title1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title1.setText("Usuario:");
-
-        title2.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
-        title2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title2.setText("Contraseña:");
-
-        user.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 18)); // NOI18N
-
-        pass.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 18)); // NOI18N
-        pass.setText("************");
-        pass.setToolTipText("");
-
-        btnentrar.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 12)); // NOI18N
-        btnentrar.setText("Entrar");
-
-        btnregistrarse.setFont(new java.awt.Font("Microsoft PhagsPa", 0, 12)); // NOI18N
-        btnregistrarse.setText("Registrarse");
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/seguridad-personal (1).png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(pass))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(98, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(btnregistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnentrar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68))
+        title1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
+        title1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        title1.setText("Cedula");
+
+        title2.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
+        title2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        title2.setText("Contraseña:");
+
+        btnEntrar.setBackground(new java.awt.Color(255, 255, 0));
+        btnEntrar.setText("Entrar");
+        btnEntrar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+
+        btnRegistrarse.setBackground(new java.awt.Color(255, 255, 0));
+        btnRegistrarse.setText("Registrarse");
+        btnRegistrarse.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+
+        panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/juegos-de-preguntas-y-respuestas.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout panelImage1Layout = new javax.swing.GroupLayout(panelImage1);
+        panelImage1.setLayout(panelImage1Layout);
+        panelImage1Layout.setHorizontalGroup(
+            panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 292, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                    .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        panelImage1Layout.setVerticalGroup(
+            panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panelRectTranslucido1Layout = new javax.swing.GroupLayout(panelRectTranslucido1);
+        panelRectTranslucido1.setLayout(panelRectTranslucido1Layout);
+        panelRectTranslucido1Layout.setHorizontalGroup(
+            panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                        .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                                .addComponent(btnRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                        .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addComponent(panelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39))))
+        );
+        panelRectTranslucido1Layout.setVerticalGroup(
+            panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnregistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnentrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26))
+                .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                        .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelImage1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(56, 56, 56)
+                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+            .addComponent(panelRectTranslucido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+            .addComponent(panelRectTranslucido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -189,14 +190,15 @@ public class Login extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnentrar;
-    private javax.swing.JButton btnregistrarse;
+    private org.edisoncor.gui.button.ButtonAqua btnEntrar;
+    private org.edisoncor.gui.button.ButtonAqua btnRegistrarse;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField pass;
+    private org.edisoncor.gui.panel.PanelImage panelImage1;
+    private org.edisoncor.gui.panel.PanelRectTranslucido panelRectTranslucido1;
     private javax.swing.JLabel title1;
     private javax.swing.JLabel title2;
     private javax.swing.JLabel titulo;
-    private javax.swing.JTextField user;
+    private org.edisoncor.gui.passwordField.PasswordField txtPass;
+    private org.edisoncor.gui.textField.TextField txtUser;
     // End of variables declaration//GEN-END:variables
 }

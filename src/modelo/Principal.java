@@ -5,12 +5,7 @@
 package modelo;
 
 import controlador.ControlLogin;
-import controlador.ControlRegistro;
-import controlador.ControlVistaInicio;
 import vista.Login;
-import vista.Menu;
-import vista.Registro;
-import vista.VistaInicio;
 
 /**
  *

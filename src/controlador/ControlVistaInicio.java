@@ -5,9 +5,14 @@
 package controlador;
 
 import java.awt.Dimension;
+import java.util.ArrayList;
+import modelo.ModeloUsuario;
 import modelo.ModeloVistaInicio;
-import vista.VistaInicio;
+import vista.VentanaPrincipal;
 import vista.Menu;
+import vista.Preguntapr;
+import vista.RegistroPregunta;
+import vista.VentanaPreguntas;
 
 /**
  *
@@ -15,13 +20,13 @@ import vista.Menu;
  */
 public class ControlVistaInicio {
 
-    private VistaInicio inicio;
-    private ModeloVistaInicio minicio;
+    private VentanaPrincipal inicio;
+    private ArrayList user;
     private Menu menu;
 
-    public ControlVistaInicio(VistaInicio inicio, ModeloVistaInicio minicio, Menu menu) {
+    public ControlVistaInicio(VentanaPrincipal inicio, ArrayList user, Menu menu) {
         this.inicio = inicio;
-        this.minicio = minicio;
+        this.user = user;
         this.menu = menu;
         inicio.setTitle("JUEGO DE PREGUNTAS");
         inicio.setLocationRelativeTo(null);
@@ -32,19 +37,28 @@ public class ControlVistaInicio {
 
     public void start() {
 
-        inicio.getBtnMenu().addActionListener(l -> ventanaMenu());
-        menu.getBtncerrar().addActionListener(l -> cerrarMenu());
+        inicio.getItemP().addActionListener(l -> ventanaAdmin());
+        inicio.getBtnQuiz().addActionListener(l -> ventanaMenu());
+        menu.getBtnSalir().addActionListener(l -> cerrarMenu());
+        menu.getBtnJugar().addActionListener(l->abrirTest());
+
+    }
+
+    public void ocultarOpcion() {
+
+        inicio.getItemAdmin().setVisible(false);
 
     }
 
     public void ventanaMenu() {
 
-        inicio.getDesktopPane().add(menu);
-        Dimension desktopSize = inicio.getDesktopPane().getSize();
+        inicio.getPanelVentana().add(menu);
+        Dimension desktopSize = inicio.getPanelVentana().getSize();
         Dimension FrameSize = menu.getSize();
-        menu.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        menu.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
         menu.show();
         menu.setVisible(true);
+        
 
     }
 
@@ -54,4 +68,47 @@ public class ControlVistaInicio {
 
     }
 
+    public void ventanaAdmin() {
+
+
+        VentanaPreguntas vp = new VentanaPreguntas();
+        RegistroPregunta rp = new RegistroPregunta();
+        ControlPreguntas cp = new ControlPreguntas(vp, rp,inicio.getPanelVentana());
+
+        cp.start();
+
+    }
+
+    public void abrirTest() {
+        
+        
+        Preguntapr p = new Preguntapr();
+        menu.dispose();      
+        inicio.getPanelVentana().add(p);
+        Dimension desktopSize = inicio.getPanelVentana().getSize();
+        Dimension FrameSize = p.getSize();
+        p.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
+        p.show();
+        p.setVisible(true);
+ 
+        
+        
+ }
+
+    //En este método para empezar a hacer el test, o al menos como sería en funcionamiento
+    public void Test(){
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+    
 }

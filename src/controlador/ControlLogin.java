@@ -4,12 +4,16 @@
  */
 package controlador;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import modelo.ModeloUsuario;
-import modelo.ModeloVistaInicio;
+import modelo.Usuario;
 import vista.Login;
 import vista.Menu;
 import vista.Registro;
-import vista.VistaInicio;
+import vista.VentanaPrincipal;
+import vista.VentanaPreguntas;
+import vista.RegistroPregunta;
 
 /**
  *
@@ -21,37 +25,57 @@ public class ControlLogin {
 
     public ControlLogin(Login login) {
         this.login = login;
-        login.setTitle("ACCESO AL APLICATIVO");
+        login.setFocusable(true);
         login.setLocationRelativeTo(null);
         login.setVisible(true);
+        
     }
 
     public void start() {
 
-        login.getBtnregistrarse().addActionListener(l -> ventanaRegistro());
-        login.getBtnentrar().addActionListener(l -> ventanaPrincipal());
+        login.getBtnRegistrarse().addActionListener(l -> ventanaRegistro());
+        login.getBtnEntrar().addActionListener(l -> Login());
 
     }
 
-    public void ventanaPrincipal() {
+    public void Login() {
 
-        VistaInicio inicio = new VistaInicio();
-        ModeloVistaInicio minicio = new ModeloVistaInicio();
-        Menu menu = new Menu();
-        login.dispose();
-        ControlVistaInicio cvi = new ControlVistaInicio(inicio, minicio, menu);
+        ArrayList<Usuario> lista = new ArrayList<>();
 
-        cvi.start();
+        lista = ModeloUsuario.loginUsuarios(login.getTxtUser().getText());
+
+        if (!lista.isEmpty()) {
+
+            VentanaPrincipal inicio = new VentanaPrincipal();
+            Menu menu = new Menu();
+            login.dispose();
+            ControlVistaInicio cvi = new ControlVistaInicio(inicio, lista, menu);
+
+            if (lista.get(0).getCedula().equals("0150447605")) {
+
+                cvi.start();
+
+            } else {
+
+                cvi.ocultarOpcion();
+                cvi.start();
+            }
+
+        } else {
+
+            JOptionPane.showMessageDialog(login, "Datos incorrectos, intentelo de nuevo");
+
+        }
 
     }
 
     public void ventanaRegistro() {
+         
+        login.dispose();
         
+        Registro r = new Registro(login);
         
-        ModeloUsuario mu = new ModeloUsuario();
-        Registro r = new Registro();
-        
-        ControlRegistro cr = new ControlRegistro(mu,r);
+        ControlRegistro cr = new ControlRegistro(r);
         
         cr.start();
         
