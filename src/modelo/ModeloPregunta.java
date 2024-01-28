@@ -183,7 +183,7 @@ public class ModeloPregunta extends Pregunta{
         }
     }  
      
-     
+    /* 
     public boolean eliminarPregunta(){
     
     
@@ -197,7 +197,66 @@ public class ModeloPregunta extends Pregunta{
 
     } 
      
+     */
      
-     
-     
+ 
+    //Mètodo para traer una pregunta aletoria dentro de los registros de la base de datos
+     public static List<Pregunta> preguntaAletoria(){
+        try {
+            String query="SELECT * "
+                    + "FROM pregunta "
+                    + "ORBER BY RAND() "
+                    + "LIMIT 1";
+            ResultSet rs= con.query(query);
+            List<Pregunta> lista = new ArrayList<Pregunta>();
+            byte[] bf;
+            while(rs.next()){
+                Pregunta p = new Pregunta();
+                p.setId_pregunta(rs.getString("id_pregunta"));
+                p.setDescripcion(rs.getString("descripcion"));
+                p.setRegion(rs.getString("region"));
+                p.setProvincia(rs.getString("provincia"));
+                p.setDificultad(rs.getString("dificultad"));
+                p.setRespuesta(rs.getString("respuesta"));
+                p.setIncorrecta_1(rs.getString("incorrecta_1"));
+                p.setIncorrecta_2(rs.getString("incorrecta_2"));
+                p.setIncorrecta_3(rs.getString("incorrecta_3"));
+                      
+                bf=rs.getBytes("imagen");
+                
+                if(bf!=null){
+                    bf=Base64.decode(bf,0,bf.length);
+                    try {
+                        
+                        p.setImagen(obtenImagen(bf));
+                        
+                    } catch (IOException ex) {
+                        
+                        p.setImagen(null);
+                        Logger.getLogger(ModeloPregunta.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }else{
+                 p.setImagen(null);
+                }
+                lista.add(p);
+            }        
+            rs.close();
+            return lista;           
+        } catch (SQLException ex) {
+            Logger.getLogger(ModeloPregunta.class.getName()).log(Level.SEVERE, null, ex);
+           return null;
+        }   
+}   
+
+
+
+
+
+
+
+
+
+
+
+    
 }

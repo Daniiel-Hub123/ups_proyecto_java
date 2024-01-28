@@ -44,6 +44,14 @@ public class ControlLogin {
 
         lista = ModeloUsuario.loginUsuarios(login.getTxtUser().getText());
 
+        /*
+        String user = lista.get(0).getRespuesta();
+        
+        if (user.equalsIgnoreCase(btnOp)) {
+            
+        }
+        */
+        
         if (!lista.isEmpty()) {
 
             VentanaPrincipal inicio = new VentanaPrincipal();

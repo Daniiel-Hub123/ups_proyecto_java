@@ -193,7 +193,7 @@ public class ControlPreguntas {
     public void rellenarCampos() {
 
     }
-
+    /*
     public void eliminarPregunta() {
 
         int fila = vp.getTablaPreguntas().getSelectedRow();
@@ -221,7 +221,7 @@ public class ControlPreguntas {
         }
 
     }
-    
+    */
     
     
 }
