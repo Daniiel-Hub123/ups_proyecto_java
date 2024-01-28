@@ -5,6 +5,7 @@
 package vista;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTable;
 import org.edisoncor.gui.button.ButtonAqua;
 
@@ -39,7 +40,7 @@ public class VentanaPreguntas extends javax.swing.JInternalFrame {
         titlequestions = new javax.swing.JLabel();
         btnEditarP = new org.edisoncor.gui.button.ButtonAqua();
         btnRegistrarP = new org.edisoncor.gui.button.ButtonAqua();
-        btnEliminar = new org.edisoncor.gui.button.ButtonAqua();
+        btnBorrar = new org.edisoncor.gui.button.ButtonAqua();
         btnSalirR = new javax.swing.JButton();
 
         javax.swing.GroupLayout panelRectTranslucido1Layout = new javax.swing.GroupLayout(panelRectTranslucido1);
@@ -82,9 +83,9 @@ public class VentanaPreguntas extends javax.swing.JInternalFrame {
         btnRegistrarP.setText("Registrar");
         btnRegistrarP.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
 
-        btnEliminar.setBackground(new java.awt.Color(204, 51, 0));
-        btnEliminar.setText("Eliminar");
-        btnEliminar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        btnBorrar.setBackground(new java.awt.Color(204, 51, 0));
+        btnBorrar.setText("Eliminar");
+        btnBorrar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
 
         btnSalirR.setText("X");
         btnSalirR.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +104,7 @@ public class VentanaPreguntas extends javax.swing.JInternalFrame {
                 .addGap(106, 106, 106)
                 .addComponent(btnEditarP, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(116, 116, 116))
             .addGroup(panelRectTranslucido2Layout.createSequentialGroup()
                 .addGap(313, 313, 313)
@@ -130,7 +131,7 @@ public class VentanaPreguntas extends javax.swing.JInternalFrame {
                 .addGroup(panelRectTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrarP, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditarP, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(40, Short.MAX_VALUE))
@@ -150,28 +151,20 @@ public class VentanaPreguntas extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public JTable getTablaPreguntas() {
-        return tablaPreguntas;
+    public ButtonAqua getBtnBorrar() {
+        return btnBorrar;
     }
 
-    public void setTablaPreguntas(JTable tablaPreguntas) {
-        this.tablaPreguntas = tablaPreguntas;
-    } 
-    
+    public void setBtnBorrar(ButtonAqua btnBorrar) {
+        this.btnBorrar = btnBorrar;
+    }
+
     public ButtonAqua getBtnEditarP() {
         return btnEditarP;
     }
 
     public void setBtnEditarP(ButtonAqua btnEditarP) {
         this.btnEditarP = btnEditarP;
-    }
-
-    public ButtonAqua getBtnEliminar() {
-        return btnEliminar;
-    }
-
-    public void setBtnEliminar(ButtonAqua btnEliminar) {
-        this.btnEliminar = btnEliminar;
     }
 
     public ButtonAqua getBtnRegistrarP() {
@@ -190,15 +183,22 @@ public class VentanaPreguntas extends javax.swing.JInternalFrame {
         this.btnSalirR = btnSalirR;
     }
 
-    public JTable getjTable1() {
+    public JTable getTablaPreguntas() {
         return tablaPreguntas;
     }
 
-    public void setjTable1(JTable jTable1) {
-        this.tablaPreguntas = jTable1;
+    public void setTablaPreguntas(JTable tablaPreguntas) {
+        this.tablaPreguntas = tablaPreguntas;
     }
-    
-    
+
+    public JLabel getTitlequestions() {
+        return titlequestions;
+    }
+
+    public void setTitlequestions(JLabel titlequestions) {
+        this.titlequestions = titlequestions;
+    }
+
     
     private void btnSalirRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirRActionPerformed
 
@@ -207,8 +207,8 @@ public class VentanaPreguntas extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.edisoncor.gui.button.ButtonAqua btnBorrar;
     private org.edisoncor.gui.button.ButtonAqua btnEditarP;
-    private org.edisoncor.gui.button.ButtonAqua btnEliminar;
     private org.edisoncor.gui.button.ButtonAqua btnRegistrarP;
     private javax.swing.JButton btnSalirR;
     private javax.swing.JScrollPane jScrollPane1;

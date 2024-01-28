@@ -79,23 +79,19 @@ public class ControlVistaInicio {
 
     }
 
+    //Método para abrir  la ventana
     public void abrirTest() {
         
+        Preguntapr rp = new Preguntapr();
         
-        Preguntapr p = new Preguntapr();
-        menu.dispose();      
-        inicio.getPanelVentana().add(p);
-        Dimension desktopSize = inicio.getPanelVentana().getSize();
-        Dimension FrameSize = p.getSize();
-        p.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-        p.show();
-        p.setVisible(true);
+        ControlQuiz cq = new ControlQuiz(menu, rp, inicio.getPanelVentana());
  
+        cq.start();
         
         
  }
 
-    //En este método para empezar a hacer el test, o al menos como sería en funcionamiento
+    //Método para codificar el Test de 10 preguntas
     public void Test(){
     
     
@@ -104,11 +100,6 @@ public class ControlVistaInicio {
     
     
     
-    
     }
-    
-    
-    
-    
     
 }

@@ -183,25 +183,23 @@ public class ModeloPregunta extends Pregunta{
         }
     }  
      
-    /* 
-    public boolean eliminarPregunta(){
-    
-    
+    public boolean eliminarPregunta() {
+
         String sql = "Delete from public.pregunta "
-                + "WHERE id_pregunta='" + getId_Pregunta + "'; ";
+                + "WHERE id_pregunta='" + getId_pregunta() + "'; ";
         if (con.noQuery(sql) == null) {
             return true;
         } else {
             return false;
         }
 
-    } 
-     
-     */
+    }
+
+
      
  
     //Mètodo para traer una pregunta aletoria dentro de los registros de la base de datos
-     public static List<Pregunta> preguntaAletoria(){
+     public static List<Pregunta> preguntaAleatoria(){
         try {
             String query="SELECT * "
                     + "FROM pregunta "

@@ -33,7 +33,7 @@ public class RegistroPregunta extends javax.swing.JDialog {
     private void initComponents() {
 
         panelRectTranslucido1 = new org.edisoncor.gui.panel.PanelRectTranslucido();
-        title = new javax.swing.JLabel();
+        txtId_Pregunta = new javax.swing.JLabel();
         title2 = new javax.swing.JLabel();
         title3 = new javax.swing.JLabel();
         title4 = new javax.swing.JLabel();
@@ -43,7 +43,6 @@ public class RegistroPregunta extends javax.swing.JDialog {
         title7 = new javax.swing.JLabel();
         title8 = new javax.swing.JLabel();
         title9 = new javax.swing.JLabel();
-        title10 = new javax.swing.JLabel();
         txtDescripcion = new org.edisoncor.gui.textField.TextField();
         txtRespuesta = new org.edisoncor.gui.textField.TextField();
         txtRegion = new org.edisoncor.gui.comboBox.ComboBoxRect();
@@ -56,6 +55,8 @@ public class RegistroPregunta extends javax.swing.JDialog {
         btnEditar = new org.edisoncor.gui.button.ButtonAqua();
         btnRegistrar = new org.edisoncor.gui.button.ButtonAqua();
         btnCerrar = new javax.swing.JButton();
+        title11 = new javax.swing.JLabel();
+        titulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -63,9 +64,8 @@ public class RegistroPregunta extends javax.swing.JDialog {
         panelRectTranslucido1.setColorPrimario(new java.awt.Color(255, 255, 255));
         panelRectTranslucido1.setColorSecundario(new java.awt.Color(0, 153, 153));
 
-        title.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 36)); // NOI18N
-        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title.setText("REGISTRO DE PREGUNTA");
+        txtId_Pregunta.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 36)); // NOI18N
+        txtId_Pregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         title2.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
         title2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -101,10 +101,6 @@ public class RegistroPregunta extends javax.swing.JDialog {
         title9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         title9.setText("Opcion 2:");
 
-        title10.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
-        title10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        title10.setText("Opcion 3:");
-
         txtDescripcion.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         txtRegion.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Insular", "Costa", "Sierra", "Amazonía" }));
@@ -137,6 +133,14 @@ public class RegistroPregunta extends javax.swing.JDialog {
             }
         });
 
+        title11.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
+        title11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        title11.setText("Opcion 3:");
+
+        titulo.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 36)); // NOI18N
+        titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo.setText("REGISTRO DE PREGUNTA");
+
         javax.swing.GroupLayout panelRectTranslucido1Layout = new javax.swing.GroupLayout(panelRectTranslucido1);
         panelRectTranslucido1.setLayout(panelRectTranslucido1Layout);
         panelRectTranslucido1Layout.setHorizontalGroup(
@@ -149,8 +153,7 @@ public class RegistroPregunta extends javax.swing.JDialog {
                             .addComponent(title3)
                             .addComponent(title8)
                             .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(title9, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(title10))
+                            .addComponent(title9, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
@@ -165,17 +168,26 @@ public class RegistroPregunta extends javax.swing.JDialog {
                                     .addComponent(title7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
-                                .addComponent(txtOpcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
-                                .addComponent(title4)
-                                .addGap(29, 29, 29))
-                            .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
-                                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                                        .addGap(11, 11, 11)
+                                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnExaminar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40)))
+                                .addGap(40, 40, 40))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRectTranslucido1Layout.createSequentialGroup()
+                                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(txtId_Pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelRectTranslucido1Layout.createSequentialGroup()
+                                        .addComponent(txtOpcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                                        .addComponent(title4)))
+                                .addGap(29, 29, 29)))
                         .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtRegion, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDificultad, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -183,26 +195,27 @@ public class RegistroPregunta extends javax.swing.JDialog {
                             .addComponent(imagenPregunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(50, Short.MAX_VALUE))
                     .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
-                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
             .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
-                    .addGap(214, 214, 214)
-                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(608, Short.MAX_VALUE)))
+                    .addGap(86, 86, 86)
+                    .addComponent(title11)
+                    .addContainerGap(754, Short.MAX_VALUE)))
+            .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                    .addGap(41, 41, 41)
+                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(459, Short.MAX_VALUE)))
         );
         panelRectTranslucido1Layout.setVerticalGroup(
             panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
-                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(txtId_Pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -228,9 +241,7 @@ public class RegistroPregunta extends javax.swing.JDialog {
                             .addComponent(title9, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtOpcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(title10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(txtRegion, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -245,14 +256,21 @@ public class RegistroPregunta extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnExaminar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(imagenPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(27, 27, 27)
-                .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(55, Short.MAX_VALUE))
             .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRectTranslucido1Layout.createSequentialGroup()
-                    .addContainerGap(503, Short.MAX_VALUE)
-                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(45, 45, 45)))
+                    .addContainerGap(431, Short.MAX_VALUE)
+                    .addComponent(title11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(106, 106, 106)))
+            .addGroup(panelRectTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelRectTranslucido1Layout.createSequentialGroup()
+                    .addGap(41, 41, 41)
+                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(496, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -275,7 +293,13 @@ public class RegistroPregunta extends javax.swing.JDialog {
         
     }//GEN-LAST:event_btnCerrarActionPerformed
 
-    
+    public JLabel getTxtId_Pregunta() {
+        return txtId_Pregunta;
+    }
+
+    public void setTxtId_Pregunta(JLabel txtId_Pregunta) {
+        this.txtId_Pregunta = txtId_Pregunta;
+    }    
     
     public JButton getBtnCerrar() {
         return btnCerrar;
@@ -353,6 +377,14 @@ public class RegistroPregunta extends javax.swing.JDialog {
         return txtOpcion3;
     }
 
+    public JLabel getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(JLabel titulo) {
+        this.titulo = titulo;
+    }
+
     public void setTxtOpcion3(TextField txtOpcion3) {
         this.txtOpcion3 = txtOpcion3;
     }
@@ -391,8 +423,7 @@ public class RegistroPregunta extends javax.swing.JDialog {
     private org.edisoncor.gui.button.ButtonAqua btnRegistrar;
     private javax.swing.JLabel imagenPregunta;
     private org.edisoncor.gui.panel.PanelRectTranslucido panelRectTranslucido1;
-    private javax.swing.JLabel title;
-    private javax.swing.JLabel title10;
+    private javax.swing.JLabel title11;
     private javax.swing.JLabel title2;
     private javax.swing.JLabel title3;
     private javax.swing.JLabel title4;
@@ -401,8 +432,10 @@ public class RegistroPregunta extends javax.swing.JDialog {
     private javax.swing.JLabel title7;
     private javax.swing.JLabel title8;
     private javax.swing.JLabel title9;
+    private javax.swing.JLabel titulo;
     private org.edisoncor.gui.textField.TextField txtDescripcion;
     private org.edisoncor.gui.comboBox.ComboBoxRect txtDificultad;
+    private javax.swing.JLabel txtId_Pregunta;
     private org.edisoncor.gui.textField.TextField txtOpcion1;
     private org.edisoncor.gui.textField.TextField txtOpcion2;
     private org.edisoncor.gui.textField.TextField txtOpcion3;
@@ -410,4 +443,8 @@ public class RegistroPregunta extends javax.swing.JDialog {
     private org.edisoncor.gui.comboBox.ComboBoxRect txtRegion;
     private org.edisoncor.gui.textField.TextField txtRespuesta;
     // End of variables declaration//GEN-END:variables
+
+    public Object getBtnEliminar() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
