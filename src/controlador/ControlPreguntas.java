@@ -70,7 +70,7 @@ public class ControlPreguntas {
         rp.getBtnEditar().setVisible(false);
 
         rp.getTitulo().setText("");
-        rp.getTitulo().setText("REGISTRO DE PERSONA");        
+        rp.getTitulo().setText("REGISTRO DE PREGUNTA");        
          
     }
 

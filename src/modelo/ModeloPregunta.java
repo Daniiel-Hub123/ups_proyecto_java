@@ -203,8 +203,8 @@ public class ModeloPregunta extends Pregunta{
         try {
             String query="SELECT * "
                     + "FROM pregunta "
-                    + "ORBER BY RAND() "
-                    + "LIMIT 1";
+                    + "ORDER BY RANDOM() "
+                    + "LIMIT 10";
             ResultSet rs= con.query(query);
             List<Pregunta> lista = new ArrayList<Pregunta>();
             byte[] bf;

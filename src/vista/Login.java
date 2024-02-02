@@ -106,7 +106,7 @@ public class Login extends javax.swing.JDialog {
 
         title1.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
         title1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        title1.setText("Cedula");
+        title1.setText("Cédula");
 
         title2.setFont(new java.awt.Font("Microsoft PhagsPa", 1, 24)); // NOI18N
         title2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);

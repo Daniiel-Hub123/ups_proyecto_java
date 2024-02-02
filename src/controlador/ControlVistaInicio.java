@@ -6,6 +6,7 @@ package controlador;
 
 import java.awt.Dimension;
 import java.util.ArrayList;
+import modelo.ModeloPregunta;
 import modelo.ModeloUsuario;
 import modelo.ModeloVistaInicio;
 import vista.VentanaPrincipal;
@@ -84,22 +85,11 @@ public class ControlVistaInicio {
         
         Preguntapr rp = new Preguntapr();
         
-        ControlQuiz cq = new ControlQuiz(menu, rp, inicio.getPanelVentana());
- 
-        cq.start();
+        ModeloPregunta mp = new ModeloPregunta();
         
-        
- }
-
-    //Método para codificar el Test de 10 preguntas
-    public void Test(){
-    
-    
-    
-    
-    
-    
+        ControlQuiz cq = new ControlQuiz(menu, rp, inicio.getPanelVentana(),mp);
     
     }
+
     
 }
